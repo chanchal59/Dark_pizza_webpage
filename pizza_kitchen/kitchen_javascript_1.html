@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kitchen</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200&family=News+Cycle&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
+    <style>
+        .button_1:hover{background-color:#ff4500;box-shadow: 0 0 10px #ff4500,0 0 40px #ff4500,
+                    0 0 80px #ff4500;transition:0.5s; } 
+      
+        /*h1{background-image: url(https://media.giphy.com/media/uhBRkVfDoKwRW/giphy.gif);-webkit-background-clip: text;}*/
+        .navbar-brand:hover{opacity: 0.7;transition:0.5;}
+        .nav-link:hover{transform: translateY(-5px);transition: 0.5s; }
+
+        .Submit:hover{transition: 0.5s;background-color: #ff4500; }
+
+        .buttons_5:hover{transition: 0.5s;opacity: 0.5;}
+        .dropdown-item:hover{background-color: #ffbf47;transition: 0.3s;}
+
+        /* search box*/
+        .searchbox_1{
+        background-color: #fffbf8;
+        padding:5px;
+        width:300px;
+        margin: 5px auto;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        border-radius:6px;
+        -webkit-box-shadow:
+        0 2px 4px 0 rgba(72, 72, 72, 0.83),
+        0 10px 15px 0 rgba(126, 126, 126, 0.12),
+        0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+        0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+        -moz-box-shadow:
+        0 2px 4px 0 rgba(72, 72, 72, 0.83),
+        0 10px 15px 0 rgba(126, 126, 126, 0.12),
+        0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+        0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+        box-shadow:
+        0 2px 4px 0 rgba(72, 72, 72, 0.83),
+        0 10px 15px 0 rgba(126, 126, 126, 0.12),
+        0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+        0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+        }
+        .search_1{
+        width:250px;
+        height:30px;
+        padding-left:15px;
+        border-radius:6px;
+        border:none;
+        color:#0F0D0D;;
+        font-weight:500;
+        background-color:#E2EFF7;;
+        -webkit-box-shadow:
+        0 -2px 2px 0 rgba(199, 199, 199, 0.55),
+        0 1px 1px 0 #fff,
+        0 2px 2px 1px #fafafa,
+        0 2px 4px 0 #b2b2b2 inset,
+        0 -1px 1px 0 #f2f2f2 inset,
+        0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+        -moz-box-shadow:
+        0 -2px 2px 0 rgba(199, 199, 199, 0.55),
+        0 1px 1px 0 #fff,
+        0 2px 2px 1px #fafafa,
+        0 2px 4px 0 #b2b2b2 inset,
+        0 -1px 1px 0 #f2f2f2 inset,
+        0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+        box-shadow:
+        0 -2px 2px 0 rgba(199, 199, 199, 0.55),
+        0 1px 1px 0 #fff,
+        0 2px 2px 1px #fafafa,
+        0 2px 4px 0 #b2b2b2 inset,
+        0 -1px 1px 0 #f2f2f2 inset,
+        0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+        }
+        .submit_1{
+        width:35px;
+        height:30px;
+        background-image:url(img/search-btn.png);
+        background-repeat: no-repeat;
+        background-position: 17px 2px;
+        background-color:orange;
+        color: red;
+        -webkit-background-size:20px 20px;
+        background-size:20px 20px;
+        border:none;
+        cursor:pointer;
+        }
+        .search_1:focus{
+        outline:0;
+        }
+
+         @media only screen and (max-width: 600px) {
+            .last_sec {
+                margin-top: 2rem;
+              }
+
+            .button_5 {
+                margin-left: 3rem;
+
+            }  
+
+            .CAS {
+                padding-left: -15rem; 
+            }
+
+            .last { 
+                margin: 2rem;
+
+             }
+
+        }
+
+    </style>
+</head>
+    <body style="background-color: #0a0a0a;">
+      
+        <div style="background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)),url(ktichen_new_1.jpg);height: 100vh; background-size: 100% 100%; width: 100%; border-radius:20px; ">
+            <div class="container pt-3">  
+                <!-- navbar starts   -->
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#" style="text-decoration: none;font-family: 'Sniglet', cursive;color:#f0ffff;font-size: 33px;">Homechef</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto ml-3">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;font-family: 'Rancho', cursive;color:#f0ffff;letter-spacing: 1px;font-size: 19px;">
+                                  Shop
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #1c1c1c;font-size: 20px;">
+                                    <a class="dropdown-item" href="file:///C:/Users/Chanchal%20Dhawan/Desktop/kitchen_javascript/pizza_1.html#0" style="color: white;font-family: 'Rancho', cursive;">Pizza</a>
+                                    <a class="dropdown-item" href="#" style="color: white;font-family: 'Rancho', cursive;">Dessert</a>
+                                    <a class="dropdown-item" href="#" style="color: white;font-family: 'Rancho', cursive;">Noodle</a>
+                                    <a class="dropdown-item" href="#" style="color: white;font-family: 'Rancho', cursive;">Cocktails</a>
+                                    <a class="dropdown-item" href="#" style="color: white;font-family: 'Rancho', cursive;">Salad</a>
+                                </div>    
+                            </li>
+                            <li class="nav-item ml-3">
+                                <a class="nav-link" href="#" style="text-decoration: none;font-family: 'Rancho', cursive;color:#f0ffff;letter-spacing: 1px;font-size: 19px;">Features</a>
+                            </li>
+                            <li class="nav-item ml-3">
+                                <a class="nav-link" href="#" style="text-decoration: none;font-family: 'Rancho', cursive;color:#f0ffff;letter-spacing: 1px;font-size: 19px;">Recipes</a>
+                            </li>
+                             <li class="nav-item ml-3">
+                                <a class="nav-link" href="#" style="text-decoration: none;font-family: 'Rancho', cursive;color:#f0ffff;letter-spacing: 1px;font-size: 19px;">Hotline</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button type="button" class="btn px-4 py-1 mr-3 border-0 button_1" data-toggle="modal" data-target="#myModal" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;"><b>Login</b></button>
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog modal-dialog-centered" style="border-radius: 50%;">
+                                    <div class="modal-content justify-content-center" style="background-color:#ffbf47;   height: 20rem;width: 15rem;margin-left: 25%;/*box-shadow: 1px 1px 20px 1px #ffd17a;*/border-radius: 15px;">
+                                  
+                                        <!-- Modal Header -->
+                                        <div class="modal-header" style="border-bottom: 1px solid grey;">
+                                          <h4 class="modal-title text-center" style="font-family: 'Sniglet', cursive;color: white;"><b>Login</b></h4>
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                    
+                                        <!-- Modal body -->
+                                        <div class="modal-body" style="border-bottom: 1px solid grey;">
+                                            <label for="username" style="font-family: 'Sniglet', cursive;color: white;">Username</label><br>
+                                            <input type="text" id="username"  style="border-radius: 20px;font-family: 'Sniglet', cursive;border:3px solid lightgrey; "><br><br>
+                                            <label for="username" style="font-family: 'Sniglet', cursive;color: white;">Password</label><br>
+                                            <input type="text" id="username" style="border-radius: 20px;font-family: 'Sniglet', cursive; border: 3px solid lightgrey;"><br>
+                                        </div>
+                                    
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn px-3 Submit" data-dismiss="modal" style="margin-right: 35%;border-radius: 20px;background-color: #904e95;color: white;font-family: 'Sniglet', cursive;">Submit</button>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+  
+                        <button type="button" class="btn px-3 py-1 border-0 button_1" data-toggle="modal" data-target="#myModal_1" style="background-color: #ff7f50;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;"><b>Sign Up</b></button>
+                            <div class="modal fade" id="myModal_1">
+                                <div class="modal-dialog modal-dialog-centered" style="border-radius: 50%;">
+                                    <div class="modal-content justify-content-center border-0" style="background-image: linear-gradient(to right, #fd746c, #ff9068);height: 20rem;width: 15rem;margin-left: 25%;/*box-shadow: 1px 1px 20px 1px #ffd17a;*/border-radius: 15px;">
+                                  
+                                        <!-- Modal Header -->
+                                        <div class="modal-header" style="border-bottom: 1px solid grey;">
+                                          <h4 class="modal-title text-center" style="font-family: 'Sniglet', cursive;color: white;"><b>Sign Up</b></h4>
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                    
+                                        <!-- Modal body -->
+                                        <div class="modal-body mt-3" style="border-bottom: 1px solid grey;">
+                                            <button type="button" class="btn btn-lg btn-block mt-2" style="background-color: #1e90ff; color: white; font-size: 13px;"><i class="fa fa-facebook mr-3" aria-hidden="true"></i>Sign up with facebook</button>
+                                            <button type="button" class="btn btn-primary border-0 btn-lg btn-block mt-2" style="font-size: 13px;background-color: #904e95; color: white; "><i class="fa fa-google mr-3" aria-hidden="true"></i>Sign up with google</button>
+                                            <button type="button" class="btn btn-primary border-0 btn-lg btn-block mt-2" style="font-size: 13px;background-color: #9acd32; color: white; "><i class="fa fa-envelope mr-3" aria-hidden="true"></i>Sign up with mail</button>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+  
+                    </div>
+                </nav>
+                <!-- navbar end -->
+            </div> 
+
+            <div class="col-sm-8 d-flex flex-column mt-5 ml-3" style="font-family: 'Ribeye', cursive;color:#faebd7;padding-top: 1%;padding-left: 3rem;">
+                <h1 class="mt-3" style="font-size: 5rem;">Chefs</h1>
+                <h1 class="mt-3 ml-5 CAS" style="font-size: 5rem;">Academy</h1>
+                <h1 class="mt-3" style="font-size: 5rem;">Secrets</h1>
+            </div>   
+        </div>
+
+        <!-- recipe display -->
+        <!-- <div class="mx-auto d-flex flex-column flex-wrap col-lg-8 justify-content-center pb-5" style="background-image: linear-gradient(to right, #ffb75e, #ed8f03);opacity: 0.9; border-radius: 10px; ">
+
+            
+            <form class="searchbox_1 mt-5 mb-5" >
+            <input type="search" class="search_1" placeholder="Search" />
+            <button type="submit" class="submit_1" value="search">&nbsp;</button>
+            </form>
+            
+            <div class="d-flex mt-3 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee;">
+                        <img class="card-img-top" src="kebab.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Kebab and Paneer pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee; ">
+                        <img class="card-img-top" src="Wholegrain.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Wholegrain Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee; ">
+                        <img class="card-img-top" src="Scone.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Scone Pizza</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee; ">
+                        <img class="card-img-top" src="Multigrain.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Multigrain Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;">
+                        <img class="card-img-top" src="Margherita.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Margherita Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;">
+                        <img class="card-img-top" src="Pepperoni.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Pepperoni pizza</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;">
+                        <img class="card-img-top" src="Vegetarian.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Vegetarian Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;"> 
+                        <img class="card-img-top" src="Mexican.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Mexican Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;"> 
+                        <img class="card-img-top" src="Mushroom.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Mini Mushroom Pizza Recipe</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- recipe display end -->
+
+
+
+        <!-- recipes -->
+        <div class="container">
+            <div class="d-flex mt-5 align-items-start">
+                <h5 style="letter-spacing: 2px; font-size: 3rem;color: #faebd7;font-family: 'Rancho', cursive;margin-left: 2rem;">Recipes</h5>
+                <div class="col-lg-6 ml-5 mt-2">
+                    <input class="form-control mt-2 " type="text" placeholder="Search recipes and more..." aria-label="Search" style="border-radius: 30px;font-size: 13px;margin-left: 10%;background: #faebd7;">
+                </div>
+            </div>
+
+            <div class="d-flex mt-5 pb-5 align-items-start flex-wrap">
+                <div class="d-flex flex-column col-md-2 button_5">
+
+                    <button type="button" class="btn px-3 py-1 border-0" id="pizza_1" onclick="myFunction_1()" style="border-radius: 20px;font-size: 15px;font-family: 'Sniglet', cursive;background-image: linear-gradient(to right,#c31432,#240b36);color: white;">
+                        <i class="fa fa-cutlery mr-2" aria-hidden="true" style="font-size: 18px;color: #faebd7; border-radius: 7px;"></i>Pizza</button>
+
+                    <button type="button" class="btn px-3 py-1 border-0 mt-3" id="dessert_1" onclick="myFunction_2()"  style="border-radius: 20px;font-size: 15px;font-family: 'Sniglet', cursive;background-image: linear-gradient(to right,#c31432,#240b36);color: white;"><i class="fa fa-birthday-cake mr-2" aria-hidden="true"  style="font-size: 18px;color: #faebd7; border-radius: 7px;"></i>Dessert</button>
+
+                    <button type="button" class="btn px-3 py-1 border-0 mt-3" id="noodle_1" onclick="myFunction_3()" style="border-radius: 20px;font-size: 15px;font-family: 'Sniglet', cursive;background-image: linear-gradient(to right,#c31432,#240b36);color: white;"><i class="fa fa-cutlery mr-2" aria-hidden="true" style="font-size: 18px;border-radius: 7px;color: #faebd7;"></i>Noodle</button>
+
+                    <button type="button" class="btn px-3 py-1 border-0 mt-3" id="cocktails_1" onclick="myFunction_4()" style="border-radius: 20px;font-size: 15px;font-family: 'Sniglet', cursive;background-image: linear-gradient(to right,#c31432,#240b36);color: white;"><i class="fa fa-glass mr-2" aria-hidden="true" style="font-size: 18px;border-radius: 7px;color: #faebd7;"></i>Cocktails</button>
+                    
+                    <button type="button" class="btn px-3 py-1 border-0 mt-3" id="salad_1" onclick="myFunction_5()" style="border-radius: 20px;font-size: 15px;font-family: 'Sniglet', cursive;background-image: linear-gradient(to right,#c31432,#240b36);color: white;"><i class="fa fa-cutlery mr-2" aria-hidden="true" style="font-size: 18px;border-radius: 7px;color: #faebd7;"></i>Salad</button>
+
+                </div>
+
+                <div style="background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(side_veg.jpg);height: 35vh; background-size: 100% 100%;border-radius: 20px;color: #faebd7;border: 2px solid white;" class="col-lg-5 ml-5 last_sec">
+                    <div class="d-flex flex-column mt-3 justify-content-center" style="font-family: 'Sniglet', cursive;color: ;margin-left: 10rem;">
+                        <h3 style="">Citrus Salad</h3>
+                        <h3 style="margin-top: -10px;">with Brries</h3>
+                    </div>
+                    <div class="col-sm-6" style="font-size: 10px;font-family: 'Sniglet', cursive;margin-left: 5rem;">
+                        <p><b>In the season of fresh strwberries, I suggest making a very tasty and simple pie with this wonderfull berries.</b></p>
+                    </div>
+                    <div class="d-flex" style="padding-left: 5rem;margin-left: 5rem;">
+                        <div class="d-flex flex-column">
+                            <p style="font-size: 10px;font-family: 'Sniglet', cursive;"><b>serving</b></p>
+                            <i class="fa fa-users" aria-hidden="true" style="font-size: 10px;margin-top: -15px;"></i> 
+                        </div> 
+                        <div class="d-flex flex-column ml-5">
+                            <p style="font-size: 10px;font-size: 10px;font-family: 'Sniglet', cursive;"><b>Cook Time</b></p>
+                            <h6 style="font-size: 10px;margin-top: -15px;"><b>1h 15m</b></h6>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex flex-column last ml-3">
+                    <div class="mt-3 p-2" style="background-image: linear-gradient(to right,#000000,#e74c3c); border-radius: 25px;color: white;">
+                        <h6 class="d-flex justify-content-center">Avocoda Salad</h6>
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex flex-column">
+                                <p style="font-size: 10px;"><b>serving</b></p>
+                                <i class="fa fa-users" aria-hidden="true" style="font-size: 10px;margin-top: -15px;"></i> 
+                            </div> 
+                            <div class="d-flex flex-column ml-5">
+                                <p style="font-size: 10px;"><b>Cook Time</b></p>
+                                <h6 style="font-size: 10px;margin-top: -15px;"><b>1h 30m</b></h6>
+                            </div>  
+                        </div>  
+                    </div>
+                    <div class="p-2 mt-3" style="background-image: linear-gradient(to right,#000000,#e74c3c); border-radius: 25px; color: white;">
+                        <h6 class="d-flex justify-content-center">Green Chicken Pasta</h6>
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex flex-column">
+                                <p style="font-size: 10px;"><b>serving</b></p>
+                                <i class="fa fa-users" aria-hidden="true" style="font-size: 10px;margin-top: -15px;"></i> 
+                            </div> 
+                            <div class="d-flex flex-column ml-5">
+                                <p style="font-size: 10px;"><b>Cook Time</b></p>
+                                <h6 style="font-size: 10px;margin-top: -15px;"><b>1h 50m</b></h6>
+                            </div>  
+                        </div>  
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- recipe display -->
+        <div class="mx-auto col-lg-8 justify-content-center pb-5 to_display pt-3" id="pizza_2" style="background-image: linear-gradient(to right, #ffb75e, #ed8f03);opacity: 0.9; border-radius: 10px;display:none;">
+
+            
+            <form class="searchbox_1 mt-5 mb-5" >
+            <input type="search" class="search_1" placeholder="Search"/>
+            <button type="submit" class="submit_1" value="search">&nbsp;</button>
+            </form>
+            
+            <div class="d-flex mt-3 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee;">
+                        <img class="card-img-top" src="kebab.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Kebab and Paneer pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee; ">
+                        <img class="card-img-top" src="Wholegrain.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Wholegrain Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee; ">
+                        <img class="card-img-top" src="Scone.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Scone Pizza</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee; ">
+                        <img class="card-img-top" src="Multigrain.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Multigrain Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;">
+                        <img class="card-img-top" src="Margherita.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Margherita Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;">
+                        <img class="card-img-top" src="Pepperoni.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Pepperoni pizza</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;">
+                        <img class="card-img-top" src="Vegetarian.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Vegetarian Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;"> 
+                        <img class="card-img-top" src="Mexican.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Mexican Pizza</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;"> 
+                        <img class="card-img-top" src="Mushroom.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Mini Mushroom Pizza Recipe</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pizza display end -->
+
+
+
+        <!-- dessert display -->
+        <div class="mx-auto col-lg-8 justify-content-center pb-5 pt-3 to_display" id="dessert_2" style="background-image: linear-gradient(to right,#a8e063, #56ab2f);opacity: 0.9; border-radius: 10px;display: none; ">
+
+            
+            <form class="searchbox_1 mt-5 mb-5" >
+            <input type="search" class="search_1" placeholder="Search" />
+            <button type="submit" class="submit_1" value="search">&nbsp;</button>
+            </form>
+            
+            <div class="d-flex mt-3 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0fff0;">
+                        <img class="card-img-top" src="Chocolate.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Chocolate Covered Oreos</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0fff0; ">
+                        <img class="card-img-top" src="Chocolate_Pudding.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Chocolate Pudding</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0fff0; ">
+                        <img class="card-img-top" src="Vanilla.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Vanilla Pudding</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0fff0; ">
+                        <img class="card-img-top" src="Neapolitan.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Neapolitan Bundt Cake</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;">
+                        <img class="card-img-top" src="Swiss.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Swiss Roll Cake</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;">
+                        <img class="card-img-top" src="Slutty.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Slutty Cheesecake Bars</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;">
+                        <img class="card-img-top" src="Confetti.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Confetti Squares</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;"> 
+                        <img class="card-img-top" src="Chocolate_Covered.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Chocolate-Covered Cake Balls</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;"> 
+                        <img class="card-img-top" src="Chess.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Chess Pie</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- dessert display end -->
+
+
+        <!-- noodle display -->
+        <div class="mx-auto col-lg-8 justify-content-center pb-5 pt-3 to_display" id="noodle_2" style="background-image: linear-gradient(to right,#f85032, #e73827);opacity: 0.9; border-radius: 10px;display: none; ">
+
+            
+            <form class="searchbox_1 mt-5 mb-5" >
+            <input type="search" class="search_1" placeholder="Search" />
+            <button type="submit" class="submit_1" value="search">&nbsp;</button>
+            </form>
+            
+            <div class="d-flex mt-3 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee;">
+                        <img class="card-img-top" src=" Glass.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Glass Noodle Salad</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee; ">
+                        <img class="card-img-top" src="Eggplant.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Eggplant Pomodoro Noodle</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee; ">
+                        <img class="card-img-top" src="Mediterranean.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Mediterranean Noodles</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #fff5ee; ">
+                        <img class="card-img-top" src="Oats.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Oats Noodles</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;">
+                        <img class="card-img-top" src="Pan.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Pan Fried Noodles</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;">
+                        <img class="card-img-top" src="Vegetabl.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Vegetable Chowmein</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;">
+                        <img class="card-img-top" src="Singapore.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Singapore Noddles</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;"> 
+                        <img class="card-img-top" src="Paneer_Noodles.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Paneer Noodles</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #fff5ee;"> 
+                        <img class="card-img-top" src="Hakka.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Hakka Noodles</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- noodle display end -->
+
+
+        <!-- cocktails display -->
+        <div class="mx-auto col-lg-8 justify-content-center pb-5 pt-3 to_display" id="cocktails_2" style="background-image: linear-gradient(to right,#65c7f7,#0052d4);opacity: 0.9; border-radius: 10px;display: none; ">
+
+            
+            <form class="searchbox_1 mt-5 mb-5" >
+            <input type="search" class="search_1" placeholder="Search" />
+            <button type="submit" class="submit_1" value="search">&nbsp;</button>
+            </form>
+            
+            <div class="d-flex mt-3 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0f8ff;">
+                        <img class="card-img-top" src="SIDECAR.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Sidecar</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0f8ff; ">
+                        <img class="card-img-top" src="VESPER.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Vesper</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0f8ff; ">
+                        <img class="card-img-top" src="TOM.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Tom collins</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0f8ff; ">
+                        <img class="card-img-top" src="Ginn.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Ginn fizz</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0f8ff;">
+                        <img class="card-img-top" src="AMERICANO.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">AMERICANO</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0f8ff;">
+                        <img class="card-img-top" src=" AVIATION.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Aviation</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0f8ff;">
+                        <img class="card-img-top" src="BOULIVARDIER.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Bolivardier</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0f8ff;"> 
+                        <img class="card-img-top" src="APEROL.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Aprerol spritz</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0f8ff;"> 
+                        <img class="card-img-top" src="OLD.jpg" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Old fashioned</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- display cocktails end -->
+
+
+        <!-- salad dispaly -->
+        <div class="mx-auto col-lg-8 justify-content-center pb-5 pt-3 to_display" id="salad_2" style="background-image: linear-gradient(to right,#dce35b,#45b649);opacity: 0.9; border-radius: 10px;display: none; ">
+
+            
+            <form class="searchbox_1 mt-5 mb-5" >
+            <input type="search" class="search_1" placeholder="Search" />
+            <button type="submit" class="submit_1" value="search">&nbsp;</button>
+            </form>
+            
+            <div class="d-flex mt-3 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0fff0;">
+                        <img class="card-img-top" src="Classic.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Classic Greek Salad</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0fff0; ">
+                        <img class="card-img-top" src="Fruity.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Fruity Pasta Salad</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0fff0; ">
+                        <img class="card-img-top" src="New.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">New Potato Salad</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px;background-color: #f0fff0; ">
+                        <img class="card-img-top" src="Garlicky.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Garlicky Tomato Salad</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;">
+                        <img class="card-img-top" src="Apple.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Apple and Sprout Salad</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;">
+                        <img class="card-img-top" src="Crunchy.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Crunchy Nut Coleslaw</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around">
+                <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;">
+                        <img class="card-img-top" src="Tropical.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem; margin-top: -10px;">Tropical Salmon Salad</h6>
+                            <button type="button" class="btn border-0 px-4 py-1" style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;"> 
+                        <img class="card-img-top" src="Broccoli.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Broccoli Salad</h6>
+                            <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="card border-0" style="border-top-right-radius:20px;border-top-left-radius: 20px; background-color: #f0fff0;"> 
+                        <img class="card-img-top" src="Israeli.png" alt="Card image cap" style="height: 9rem;border-radius: 20px;transition: all .4s;padding: 5px;">
+                        <div class="card-body abtext">
+                            <h6 class="card-title" style="font-size: 13px;margin-left: -1rem;margin-top: -10px;">Israeli Salad</h6>
+                              <button type="button" class="btn border-0 px-4 py-1 mr-3"  style="background-color: #f7e98e;border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: -1rem;">Download Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- salad dispaly end -->
+
+
+        <script>
+            
+            var pizza = document.getElementById('pizza_1')
+            var dessert = document.getElementById('dessert_1')
+            var noodle = document.getElementById('noodle_1')
+            var cocktails = document.getElementById('cocktails_1')
+            var salad = document.getElementById('salad_1')
+
+            function myFunction_1(){
+
+                document.getElementById('pizza_2').style.display = 'block';
+                document.getElementById('dessert_2').style.display = 'none';
+                document.getElementById('noodle_2').style.display = 'none';
+                document.getElementById('cocktails_2').style.display = 'none';
+                document.getElementById('salad_2').style.display = 'none';                
+            }
+
+            function myFunction_2(){
+
+                document.getElementById('pizza_2').style.display = 'none';
+                document.getElementById('dessert_2').style.display = 'block';
+                document.getElementById('noodle_2').style.display = 'none';
+                document.getElementById('cocktails_2').style.display = 'none';
+                document.getElementById('salad_2').style.display = 'none';                
+            }
+
+            function myFunction_3(){
+
+                document.getElementById('pizza_2').style.display = 'none';
+                document.getElementById('dessert_2').style.display = 'none';
+                document.getElementById('noodle_2').style.display = 'block';
+                document.getElementById('cocktails_2').style.display = 'none';
+                document.getElementById('salad_2').style.display = 'none';                
+            }
+              
+
+            function myFunction_4(){
+
+                document.getElementById('pizza_2').style.display = 'none';
+                document.getElementById('dessert_2').style.display = 'none';
+                document.getElementById('noodle_2').style.display = 'none';
+                document.getElementById('cocktails_2').style.display = 'block';
+                document.getElementById('salad_2').style.display = 'none';                
+            }
+
+            function myFunction_5(){
+
+                document.getElementById('pizza_2').style.display = 'none';
+                document.getElementById('dessert_2').style.display = 'block';
+                document.getElementById('noodle_2').style.display = 'none';
+                document.getElementById('cocktails_2').style.display = 'none';
+                document.getElementById('salad_2').style.display = 'block';                
+            }
+
+        </script>
+            }
+
+
+    </body>
+</html>
+
+
+
+
+
+<!-- #fd746c
+#ff9068 -->

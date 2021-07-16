@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>pizza</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+    <style>
+        /* search box*/
+        .searchbox_1{
+        background-color: #fffbf8;
+        padding:5px;
+        width:300px;
+        margin: 3px auto;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        border-radius:6px;
+        -webkit-box-shadow:
+        0 2px 4px 0 rgba(72, 72, 72, 0.83),
+        0 10px 15px 0 rgba(126, 126, 126, 0.12),
+        0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+        0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+        -moz-box-shadow:
+        0 2px 4px 0 rgba(72, 72, 72, 0.83),
+        0 10px 15px 0 rgba(126, 126, 126, 0.12),
+        0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+        0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+        box-shadow:
+        0 2px 4px 0 rgba(72, 72, 72, 0.83),
+        0 10px 15px 0 rgba(126, 126, 126, 0.12),
+        0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+        0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+        }
+        #search_val{
+        width:250px;
+        height:30px;
+        padding-left:15px;
+        border-radius:6px;
+        border:none;
+        color:#0F0D0D;;
+        font-weight:500;
+        background-color:#E2EFF7;;
+        -webkit-box-shadow:
+        0 -2px 2px 0 rgba(199, 199, 199, 0.55),
+        0 1px 1px 0 #fff,
+        0 2px 2px 1px #fafafa,
+        0 2px 4px 0 #b2b2b2 inset,
+        0 -1px 1px 0 #f2f2f2 inset,
+        0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+        -moz-box-shadow:
+        0 -2px 2px 0 rgba(199, 199, 199, 0.55),
+        0 1px 1px 0 #fff,
+        0 2px 2px 1px #fafafa,
+        0 2px 4px 0 #b2b2b2 inset,
+        0 -1px 1px 0 #f2f2f2 inset,
+        0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+        box-shadow:
+        0 -2px 2px 0 rgba(199, 199, 199, 0.55),
+        0 1px 1px 0 #fff,
+        0 2px 2px 1px #fafafa,
+        0 2px 4px 0 #b2b2b2 inset,
+        0 -1px 1px 0 #f2f2f2 inset,
+        0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+        }
+        .submit_1{
+        width:35px;
+        height:30px;
+        /*background-image:url(img/search-btn.png);*/
+        background-repeat: no-repeat;
+        background-position: 17px 2px;
+        background-color:orange;
+        color: red;
+        -webkit-background-size:20px 20px;
+        background-size:20px 20px;
+        border:none;
+        cursor:pointer;
+        }
+        #search_val:focus{
+        outline:0;
+        }
+
+
+
+        .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          background-color: black;
+          overflow-x: hidden;
+          /*transition: 0.5s;*/
+          padding-top: 60px;
+        }
+
+        .sidenav a {
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+          color: #ff7f50;
+        }
+
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+
+
+
+
+
+    </style>
+</head>
+    <body style="background-color: #171717;transition:all 0.5s ease;" id="body">
+        
+            <nav class="navbar navbar-expand-lg align-items-start mt-3" style="background-color: #ffb938;">
+
+                <a class="navbar-brand ml-5" href="#" style="text-decoration: none;font-family: 'Sniglet', cursive;color:#f0ffff;font-size: 27px;">Homechef</a>
+                <form class="searchbox_1" id = 'search' >
+                    <input type="search" id="search_val" placeholder="Search" />
+                    <button type="submit" class="submit_1" value="search">&nbsp;</button>
+                </form>
+                <i class="fa fa-shopping-cart fa-2x mr-5 mt-1" onclick="openNav()" aria-hidden="true" style="color: white;"><span id="cart_val_inc">0</span></i>
+                <div id="mySidenav" class="sidenav">
+                    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                </div>
+
+            </nav>
+
+
+            <div class="mx-auto col-lg-10 justify-content-around pb-5 pt-5" id="main_div">
+            
+                <div class="d-flex mt-3 flex-wrap justify-content-center justify-content-around">
+                    <div class="col-sm-4">
+                        <div class="card border-0" id="item_1" style="background-color: #fff5ee;">
+                            <img class="card-img-top" src="kebab.jpg" alt="Card image cap" style="height: 11rem; border-radius: 10px;transition: all .4s;padding: 5px;">
+                            <div class="card-body abtext">
+                                <h6 class="card-title" style="font-size: 17px;margin-left: 0rem; margin-top: -10px;font-family: 'Sniglet', cursive;">Kebab and Paneer pizza</h6>
+                                <div class="d-flex justify-content-between align-items-start pt-2 abrps">
+                                    <a href="#0" class="btn btn-primary border-0  add_to_cart"style="background-color: #fd5800; color: white; border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: 0rem;">Add to Cart</a>
+                                    <div style="display:none; " class="neg_pos">
+                                        <a href="#0" class="neg px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">-</a>
+                                        <span class="val px-3 py-1" style="font-weight: bold;background-color: ;border-radius: 20%;color: #fe5a1d;border:3px solid #fe5a1d">1</span>
+                                        <a href="#0" class=" pos px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">+</a>
+                                    </div>  
+                                    <h4 class="mr-2 pt-1" style="margin-top: -3px;font-family: 'Sniglet', cursive;font-size: 25px;">$<span class="rps">89</span></h4>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card border-0" id="item_2" style="background-color: #fff5ee; ">
+                            <img class="card-img-top" src="Wholegrain.jpg" alt="Card image cap" style="height: 11rem; border-radius: 10px;transition: all .4s;padding: 5px;">
+                            <div class="card-body abtext">
+                                <h6 class="card-title" style="font-size: 17px;margin-left: 0rem; margin-top: -10px;font-family: 'Sniglet', cursive;">Wholegrain Pizza</h6>
+                                <div class="d-flex justify-content-between align-items-start pt-2 abrps">
+                                    <a href="#0" class="btn btn-primary border-0  add_to_cart"style="background-color: #fd5800; color: white; border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: 0rem;">Add to Cart</a>
+                                    <div style="display:none; " class="neg_pos" >
+                                        <a href="#0" class="neg px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">-</a>
+                                        <span class="val px-3 py-1" style="font-weight: bold;background-color: ;border-radius: 20%;color: #fe5a1d;border:3px solid #fe5a1d">1</span>
+                                        <a href="#0" class=" pos px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">+</a>
+                                    </div>  
+                                    <h4 class="mr-2 pt-1" style="margin-top: -3px;font-family: 'Sniglet', cursive;font-size: 25px;">$<span class="rps">166</span></h4>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card border-0" id="item_3" style="background-color: #fff5ee; ">
+                            <img class="card-img-top" src="Scone.jpg" alt="Card image cap" style="height: 11rem; border-radius: 10px;transition: all .4s;padding: 5px;">
+                            <div class="card-body abtext">
+                                <h6 class="card-title" style="font-size: 17px;margin-left: 0rem; margin-top: -10px;font-family: 'Sniglet', cursive;">Scone Pizza</h6>
+                                <div class="d-flex justify-content-between align-items-start pt-2 abrps">
+                                    <a href="#0" class="btn btn-primary border-0  add_to_cart"style="background-color: #fd5800; color: white; border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: 0rem;">Add to Cart</a>
+                                    <div style="display:none; " class="neg_pos" >
+                                        <a href="#0" class="neg px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">-</a>
+                                        <span class="val px-3 py-1" style="font-weight: bold;background-color: ;border-radius: 20%;color: #fe5a1d;border:3px solid #fe5a1d">1</span>
+                                        <a href="#0" class=" pos px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">+</a>
+                                    </div>  
+                                    <h4 class="mr-2 pt-1" style="margin-top: -3px;font-family: 'Sniglet', cursive;font-size: 25px;">$<span class="rps">130</span></h4>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around" style="padding-top: 5%;">
+                    <div class="col-sm-4">
+                        <div class="card border-0" id="item_4" style="background-color: #fff5ee; ">
+                            <img class="card-img-top" src="Multigrain.jpg" alt="Card image cap" style="height: 11rem; border-radius: 10px;transition: all .4s;padding: 5px;">
+                            <div class="card-body abtext">
+                                <h6 class="card-title" style="font-size: 17px;margin-left: 0rem; margin-top: -10px;font-family: 'Sniglet', cursive;">Multigrain Pizza</h6>
+                                <div class="d-flex justify-content-between align-items-start pt-2 abrps">
+                                    <a href="#0" class="btn btn-primary border-0  add_to_cart"style="background-color: #fd5800; color: white; border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: 0rem;">Add to Cart</a>
+                                    <div style="display:none; " class="neg_pos" >
+                                        <a href="#0" class="neg px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">-</a>
+                                        <span class="val px-3 py-1" style="font-weight: bold;background-color: ;border-radius: 20%;color: #fe5a1d;border:3px solid #fe5a1d">1</span>
+                                        <a href="#0" class=" pos px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">+</a>
+                                    </div>  
+                                    <h4 class="mr-2 pt-1" style="margin-top: -3px;font-family: 'Sniglet', cursive;font-size: 25px;">$<span class="rps">250</span></h4>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card border-0" id="item_5" style="background-color: #fff5ee;">
+                            <img class="card-img-top" src="Margherita.jpg" alt="Card image cap" style="height: 11rem; border-radius: 10px;transition: all .4s;padding: 5px;">
+                            <div class="card-body abtext">
+                                <h6 class="card-title" style="font-size: 17px;margin-left: 0rem; margin-top: -10px;font-family: 'Sniglet', cursive;">Margherita Pizza</h6>
+                                <div class="d-flex justify-content-between align-items-start pt-2 abrps">
+                                    <a href="#0" class="btn btn-primary border-0  add_to_cart"style="background-color: #fd5800; color: white; border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: 0rem;">Add to Cart</a>
+                                    <div style="display:none; " class="neg_pos" >
+                                        <a href="#0" class="neg px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">-</a>
+                                        <span class="val px-3 py-1" style="font-weight: bold;background-color: ;border-radius: 20%;color: #fe5a1d;border:3px solid #fe5a1d">1</span>
+                                        <a href="#0" class=" pos px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">+</a>
+                                    </div>  
+                                    <h4 class="mr-2 pt-1" style="margin-top: -3px;font-family: 'Sniglet', cursive;font-size: 25px;">$<span class="rps">100</span></h4>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card border-0" id="item_6" style="background-color: #fff5ee;">
+                            <img class="card-img-top" src="Pepperoni.jpg" alt="Card image cap" style="height: 11rem; border-radius: 10px;transition: all .4s;padding: 5px;">
+                            <div class="card-body abtext">
+                                <h6 class="card-title" style="font-size: 17px;margin-left: 0rem; margin-top: -10px;font-family: 'Sniglet', cursive;">Pepperoni pizza</h6>
+                               <div class="d-flex justify-content-between align-items-start pt-2 abrps">
+                                    <a href="#0" class="btn btn-primary border-0  add_to_cart"style="background-color: #fd5800; color: white; border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: 0rem;">Add to Cart</a>
+                                    <div style="display:none; " class="neg_pos" >
+                                        <a href="#0" class="neg px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">-</a>
+                                        <span class="val px-3 py-1" style="font-weight: bold;background-color: ;border-radius: 20%;color: #fe5a1d;border:3px solid #fe5a1d">1</span>
+                                        <a href="#0" class=" pos px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">+</a>
+                                    </div>  
+                                    <h4 class="mr-2 pt-1" style="margin-top: -3px;font-family: 'Sniglet', cursive;font-size: 25px;">$<span class="rps">150</span></h4>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex mt-5 flex-wrap justify-content-center justify-content-around" style="padding-top: 5%;">
+                    <div class="col-sm-4">
+                        <div class="card border-0" id="item_7" style="background-color: #fff5ee;">
+                            <img class="card-img-top" src="Vegetarian.jpg" alt="Card image cap" style="height: 11rem; border-radius: 10px;transition: all .4s;padding: 5px;">
+                            <div class="card-body abtext">
+                                <h6 class="card-title" style="font-size: 17px;margin-left: 0rem; margin-top: -10px;font-family: 'Sniglet', cursive;">Vegetarian Pizza</h6>
+                                <div class="d-flex justify-content-between align-items-start pt-2 abrps">
+                                    <a href="#0" class="btn btn-primary border-0  add_to_cart"style="background-color: #fd5800; color: white; border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: 0rem;">Add to Cart</a>
+                                    <div style="display:none; " class="neg_pos" >
+                                        <a href="#0" class="neg px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">-</a>
+                                        <span class="val px-3 py-1" style="font-weight: bold;background-color: ;border-radius: 20%;color: #fe5a1d;border:3px solid #fe5a1d">1</span>
+                                        <a href="#0" class=" pos px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">+</a>
+                                    </div>  
+                                    <h4 class="mr-2 pt-1" style="margin-top: -3px;font-family: 'Sniglet', cursive;font-size: 25px;">$<span class="rps">100</span></h4>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card border-0" id="item_8" style="background-color: #fff5ee;"> 
+                            <img class="card-img-top" src="Mexican.jpg" alt="Card image cap" style="height: 11rem; border-radius: 10px;transition: all .4s;padding: 5px;">
+                            <div class="card-body abtext">
+                                <h6 class="card-title" style="font-size: 17px;margin-left: 0rem; margin-top: -10px;font-family: 'Sniglet', cursive;">Mexican Pizza</h6>
+                                <div class="d-flex justify-content-between align-items-start pt-2 abrps">
+                                    <a href="#0" class="btn btn-primary border-0  add_to_cart"style="background-color: #fd5800; color: white; border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: 0rem;">Add to Cart</a>
+                                    <div style="display:none;" class="neg_pos" >
+                                        <a href="#0" class="neg px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">-</a>
+                                        <span class="val px-3 py-1" style="font-weight: bold;background-color: ;border-radius: 20%;color: #fe5a1d;border:3px solid #fe5a1d">1</span>
+                                        <a href="#0" class=" pos px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">+</a>
+                                    </div>  
+                                    <h4 class="mr-2 pt-1" style="margin-top: -3px;font-family: 'Sniglet', cursive;font-size: 25px;">$<span class="rps">150</span></h4>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card border-0" id="item_9" style="background-color: #fff5ee;"> 
+                            <img class="card-img-top" src="Mushroom.jpg" alt="Card image cap" style="height: 11rem; border-radius: 10px;transition: all .4s;padding: 5px;">
+                            <div class="card-body abtext">
+                                <h6 class="card-title" style="font-size: 17px;margin-left: 0rem; margin-top: -10px;font-family: 'Sniglet', cursive;">Mini Mushroom Pizza Recipe</h6>
+                                <div class="d-flex justify-content-between align-items-start pt-2 abrps">
+                                    <a href="#0" class="btn btn-primary border-0  add_to_cart"style="background-color: #fd5800; color: white; border-radius:20px;font-size: 13px;font-family: 'Sniglet', cursive;margin-left: 0rem;">Add to Cart</a>
+                                    <div style="display:none;" class="neg_pos" >
+                                        <a href="#0" class="neg px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">-</a>
+                                        <span class="val px-3 py-1" style="font-weight: bold;background-color: ;border-radius: 20%;color: #fe5a1d;border:3px solid #fe5a1d">1</span>
+                                        <a href="#0" class=" pos px-3 py-1" style="text-decoration: none;font-weight: bold;background-color: #fe5a1d;border-radius: 20%;color: white;">+</a>
+                                    </div>  
+                                    <h4 class="mr-2 pt-1" style="margin-top: -3px;font-family: 'Sniglet', cursive;font-size: 25px;">$<span class="rps">120</span></h4>  
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+
+            <script>
+
+            // open side nav
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "300px";
+              document.getElementById("body").style.marginRight = "250px";
+              document.getElementById("mySidenav").style.transition = "all 0.5s ease";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("body").style.marginRight = "0";
+            }
+            
+
+            document.getElementById('main_div').addEventListener('click' , function(e){
+
+                if (e.target.classList.contains('add_to_cart')){
+                    var b = document.getElementById('cart_val_inc');
+                    b.innerHTML = parseInt(b.innerHTML)+1
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'block';
+                    var  main_div_item = e.target.parentElement.parentElement.parentElement.id.split("_")[1];
+                    document.querySelector('#mySidenav').insertAdjacentHTML('afterbegin' ,
+
+                         `<div class="d-flex flex-column cart_ mt-3" id="cart_item_${main_div_item}" style="transition:0.5s;border-top:1px solid #ffdd1f;border-bottom:1px solid #ffdd1f;">
+                             <h6 class="card-title mt-1 ml-3"  style="font-size: 22px;margin-left: 0rem; margin-top: -10px;color: #faf0e6;">${e.target.parentElement.parentElement.querySelector('.card-title').textContent}</h6>
+                             <div class="neg_pos ml-3 mt-3 d-flex">
+                                 <a href="#0" class="neg_sec px-2 mr-2" style="text-decoration: none;font-weight: bold;background-color: #ffb938;border-radius: 20%;color: white;">-</a>
+                                 <span class="val_sec px-2" style="font-weight: bold;background-color: ;border-radius: 20%;color: #ffb938;border:3px solid #ffb938">1</span>
+                                 <a href="#0" class=" pos_sec px-2 ml-2" style="text-decoration: none;font-weight: bold;background-color: #ffb938;border-radius: 20%;color: white;">+</a>
+                             </div> 
+                             <a href="#0" class="btn btn-primary border-0 add_to_cart mt-4 py-1 mb-3"style="background-color: #ffb938;  color: white;border-radius:20px;font-size: 15px;">Place Order .$<span class="rps_sec">${e.target.nextElementSibling.nextElementSibling.querySelector('.rps').textContent}</span></a>
+                         </div>` )
+                }
+
+                else if (e.target.classList.contains('neg')){
+                    var b = document.getElementById('cart_val_inc');
+                    b.innerHTML = parseInt(b.innerHTML)-1
+                    var main_div_item = e.target.parentElement.parentElement.parentElement.parentElement.id.split("_")[1];
+                    if (parseInt(e.target.nextElementSibling.textContent)>1){
+                        e.target.nextElementSibling.textContent = parseInt(e.target.nextElementSibling.textContent)-1;
+                        let cart_in_sidenav = document.getElementById("cart_item_" + main_div_item);
+                        side_div_rate = document.getElementById("cart_item_" + main_div_item).querySelector('.rps_sec').textContent
+                        if (cart_in_sidenav){
+                            cart_in_sidenav.querySelector('.val_sec').textContent = e.target.nextElementSibling.textContent 
+                            cart_in_sidenav.querySelector('.rps_sec').textContent = e.target.nextElementSibling.textContent*parseInt(side_div_rate)
+                        }
+
+                    }
+                    else {
+                        e.target.parentElement.previousElementSibling.style.display = 'block';
+                        e.target.parentElement.style.display = 'none';
+                        var cart_in_sidenav = document.getElementById("cart_item_" + main_div_item);
+                        if (cart_in_sidenav){
+                            cart_in_sidenav.remove()
+                        }
+                    }
+
+                }
+                else if (e.target.classList.contains('pos')){
+                    var b = document.getElementById('cart_val_inc');
+                    b.innerHTML = parseInt(b.innerHTML)+1
+                    var main_div_item = e.target.parentElement.parentElement.parentElement.parentElement.id.split("_")[1];
+                    e.target.previousElementSibling.textContent = parseInt(e.target.previousElementSibling.textContent)+1
+                    var cart_in_sidenav = document.getElementById("cart_item_" + main_div_item);
+                    side_div_rate = document.getElementById("cart_item_" + main_div_item).querySelector('.rps_sec').textContent
+                    if (cart_in_sidenav){
+                        cart_in_sidenav.querySelector('.val_sec').textContent = e.target.previousElementSibling.textContent 
+                        cart_in_sidenav.querySelector('.rps_sec').textContent = e.target.previousElementSibling.textContent*parseInt(side_div_rate)
+                     }
+
+                }
+
+
+
+            })
+
+        
+
+            document.getElementById('mySidenav').addEventListener('click' , (e)=>{
+
+                if (e.target.classList.contains('neg_sec')){
+                    var b = document.getElementById('cart_val_inc');
+                    b.innerHTML = parseInt(b.innerHTML)-1
+                    var side_div_item = e.target.parentElement.parentElement.id.split("_")[2];
+                    let cart_in_sidenav = document.getElementById("cart_item_" + side_div_item);
+                    var main_items = document.getElementById('item_' + side_div_item)
+                    if (parseInt(e.target.nextElementSibling.textContent)>1){
+                        e.target.nextElementSibling.textContent = parseInt(e.target.nextElementSibling.textContent)-1
+                        if (cart_in_sidenav)
+                            main_items.querySelector('.val').textContent = e.target.nextElementSibling.textContent
+                            cart_in_sidenav.querySelector('.rps_sec').textContent = e.target.previousElementSibling.textContent*parseInt(side_div_rate)
+                    }
+                    else {
+                        var side_div_item = e.target.parentElement.parentElement.id.split("_")[2];
+                        let addToCart = document.getElementById('item_' + side_div_item).querySelector('.add_to_cart').style.display = 'block'
+                        let neg_pos = document.getElementById('item_' + side_div_item).querySelector('.neg_pos').style.display = 'none'
+                        if (cart_in_sidenav){
+                            cart_in_sidenav.remove()
+                        }
+                    }
+
+                }
+                else if (e.target.classList.contains('pos_sec')){
+                    var b = document.getElementById('cart_val_inc');
+                    b.innerHTML = parseInt(b.innerHTML)+1
+                    var side_div_item = e.target.parentElement.parentElement.id.split("_")[2];
+                    let cart_in_sidenav = document.getElementById("cart_item_" + side_div_item);
+                    var main_items = document.getElementById('item_' + side_div_item)
+                    side_div_rate = document.getElementById("cart_item_" + side_div_item).querySelector('.rps_sec').textContent
+                    e.target.previousElementSibling.textContent = parseInt(e.target.previousElementSibling.textContent)+1
+                    if (cart_in_sidenav)
+                        main_items.querySelector('.val').textContent = e.target.previousElementSibling.textContent
+                        cart_in_sidenav.querySelector('.rps_sec').textContent = e.target.previousElementSibling.textContent*parseInt(side_div_rate)
+                }
+
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                // else if (e.target.classList.contains('neg')){
+                //     if ((parseInt(e.target.parentElement.querySelector('.val').innerHTML))>1) {
+                //         e.target.parentElement.querySelector('.val').innerHTML = parseInt(e.target.parentElement.querySelector('.val').innerHTML)-1
+                //     }
+                //     else if ((parseInt(e.target.parentElement.querySelector('.val').innerHTML))==1){
+                //         e.target.parentElement.previousElementSibling.style.display = 'block'
+                //         e.target.parentElement.style.display = 'none'
+                //         // console.log(e.target.parentElement.parentElement.previousElementSibling)
+                //     }
+                // }
+
+                // else if (e.target.classList.contains('pos')){
+                //     if ((parseInt(e.target.parentElement.querySelector('.val').innerHTML))<=10) {
+                //         e.target.parentElement.querySelector('.val').innerHTML = parseInt(e.target.parentElement.querySelector('.val').innerHTML) + 1
+                //     }
+                // }
+               
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+            </script>
+
+          
+    </body>
+</html>
+
+
+
